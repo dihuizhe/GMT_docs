@@ -100,26 +100,28 @@ velo
 示例
 ----
 
-.. literalinclude:: /scripts/psvelo_ex1.sh
+.. literalinclude:: /scripts/velo_ex1.sh
    :language: bash
 
-.. figure:: /images/psvelo_ex1.*
+.. figure:: /images/velo_ex1.png
    :width: 100%
    :align: center
 
-   psvelo示例图1
+   velo示例图1
 
-.. literalinclude:: /scripts/psvelo_ex2.sh
+.. literalinclude:: /scripts/velo_ex2.sh
    :language: bash
 
-.. figure:: /images/psvelo_ex2.*
+.. figure:: /images/velo_ex2.png
    :width: 100%
    :align: center
 
-   psvelo示例图2
+   velo示例图2
 
 下面的示例展示了如何绘制应变十字线::
 
-    gmt psvelo -JX10c/10c -R0/10/0/10 -Sx10 -W1p > test.ps << EOF
+    gmt begin test pdf
+    gmt velo -JX10c/10c -R0/10/0/10 -Sx10 -W1p << EOF
     5 5 0.5 0.3 45
     EOF
+    gmt end
